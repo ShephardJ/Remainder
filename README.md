@@ -12,4 +12,4 @@ Based on my personal preferences in terms of mobile gaming and also personal goa
 7) limited color palette
 8) use of very basic synths to make music
 
-I will probably not respond to any pull requests
+I will probably not respond to any pull requests and this was my second project so it's spaghetti in there.
