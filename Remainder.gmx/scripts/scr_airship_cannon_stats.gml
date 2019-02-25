@@ -1,0 +1,117 @@
+#define scr_airship_cannon_stats
+//cannon
+if (varient =0)
+    {
+        if argument0=0
+        {
+            init_hp=15;
+            hp=15;
+        }
+        damage_type_1=0;
+        damage_1=3;
+        damage_type_2=0;
+        damage_2=0;
+        wind_up=3;
+        range=5;
+        wind_down=1;
+        mouvement_speed=1;
+        slash_resistence=0;
+        pierce_resistence=0;
+        fire_resistance=0;
+        ice_resistance=0;
+        poison_resistance=0;
+        push_resistance=1;
+        attack_type=0;
+    }
+    //zapper
+    if (varient =1)
+    {
+        if argument0=0
+        {
+            init_hp=20;
+            hp=20;
+        }
+        wind_up=5;
+        damage_type_1=1;
+        damage_1=5;
+        damage_type_2=0;
+        damage_2=0;
+        range=5;
+        wind_down=1;
+        mouvement_speed=1;
+        slash_resistence=0;
+        pierce_resistence=0;
+        fire_resistance=0;
+        ice_resistance=0;
+        poison_resistance=0;
+        push_resistance=1;
+        attack_type=0;
+    }
+
+#define scr_stats_skeleton_crew_stats
+//captain
+    if (varient=0)
+    {
+        init_hp=60;
+        hp=60;
+        damage_type_1=1;
+        damage_1=3;
+        damage_type_2=0;
+        damage_2=1.1;
+        wind_up=1;
+        range=1;
+        wind_down=2;
+        mouvement_speed=1;
+        slash_resistence=1;
+        pierce_resistence=0.5;
+        fire_resistance=1;
+        ice_resistance=1;
+        poison_resistance=0;
+        push_resistance=1.75;
+        sprite_index=spr_skeleton_pirate_captain;
+        attack_type=0;
+    }
+    //red
+    if (varient =1)
+    {
+        init_hp=25;
+        hp=25;
+        wind_up=1;
+        damage_type_1=1;
+        damage_1=2;
+        damage_type_2=2;
+        damage_2=1.1;
+        range=1;
+        wind_down=2;
+        mouvement_speed=2;
+        slash_resistence=1;
+        pierce_resistence=0.5;
+        fire_resistance=1;
+        ice_resistance=1;
+        poison_resistance=0;
+        push_resistance=1.75;
+        sprite_index=spr_skeleton_pirate_red;
+        attack_type=0;
+    }
+    //blue
+    if (varient =2)
+    {
+        init_hp=25;
+        hp=25;
+        damage_type_1=0;
+        damage_1=2;
+        damage_type_2=3;
+        damage_2=1.1;
+        wind_up=2;
+        range=1;
+        wind_down=2;
+        mouvement_speed=1;
+        slash_resistence=1;
+        pierce_resistence=0.5;
+        fire_resistance=1;
+        ice_resistance=1;
+        poison_resistance=0;
+        push_resistance=1.75;
+        sprite_index=spr_skeleton_pirate_blue;
+        attack_type=1;
+    }

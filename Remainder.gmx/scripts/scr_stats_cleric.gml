@@ -1,0 +1,27 @@
+//normal
+ if (varient =0)
+    {
+        init_hp=10;
+        hp=10;
+        damage_type_1=5;
+        damage_1=2;
+        damage_type_2=5;
+        damage_2=0;
+        wind_up=1;
+        range=4;
+        wind_down=3;
+        mouvement_speed=1;
+        slash_resistence=1;
+        pierce_resistence=1;
+        fire_resistance=1;
+        ice_resistance=1;
+        poison_resistance=1.5;
+        push_resistance=1;
+        sprite_index=spr_cleric;
+        attack_type=1;
+        alive=1;
+        infected=0;
+        sprite_main=spr_cleric
+        sprite_spell=spr_cleric_spell
+        sprite_death=spr_cleric_death
+    }

@@ -1,0 +1,7 @@
+shop_top.selected_shield_sr=argument0.shield_res_s;
+shop_top.selected_shield_pir=argument0.shield_res_pi;
+shop_top.selected_shield_pur=argument0.shield_res_pu;
+shop_top.selected_shield_fr=argument0.shield_res_f;
+shop_top.selected_shield_ir=argument0.shield_res_i;
+shop_top.selected_shield_por=argument0.shield_res_po;
+
