@@ -10,7 +10,7 @@ if (argument1>global.power_level) argument1=global.power_level;
 //change script
 if (global.world=0)||(global.world=1){scr_enemy_spawn_easy1(argument0,argument1);return 0}
 if (global.world=2)||(global.world=3)||(global.world=4){scr_enemy_spawn_easy2(argument0,argument1);return 0}
-if (global.world=5){scr_enemy_spawn_easy3(argument0,argument1);return 0}
+if (global.world=5)||(global.world=6){scr_enemy_spawn_easy3(argument0,argument1);return 0}
 if (global.world>=11)&&(global.world<21){scr_enemy_spawn_mid_undead(argument0,argument1);return 0}
 if (global.world>=21)&&(global.world<31){scr_enemy_spawn_mid_human(argument0,argument1);return 0}
 if (global.world>=31)&&(global.world<41){scr_enemy_spawn_mid_lizard(argument0,argument1);return 0}
@@ -102,7 +102,7 @@ if(global.world=0)
         }
          if (enemy_role=2) 
         {
-            spawn=instance_create(posx,posy,obj_golem);
+            spawn=instance_create(posx,posy,obj_syphon);
             with (spawn)
             {
                 varient=0;
@@ -397,7 +397,7 @@ if(global.world=5)
     //normal
     if (argument1=2)
     {
-         enemy_role=irandom(2);
+         enemy_role=irandom(1);
          if (enemy_role>0)  
          {
             scr_pesant_spawn_3_by_2();
@@ -420,7 +420,90 @@ if(global.world=5)
          
     global.wait_for_reposition=1;    
 }
-
+///////////////////////////////////////////////////////////////////////////////////////////
+//crabs
+if(global.world=6)
+{
+    //easy
+    if (argument1=1)
+    {
+         enemy_role=irandom(1);
+         if (enemy_role=0)  
+         {
+            spawn=instance_create(posx,posy,obj_skeleton);
+            with (spawn)
+            {
+                varient=0;
+            }
+         }
+         if (enemy_role=1) 
+         {
+            spawn=instance_create(posx,posy,obj_blob);
+            with (spawn)
+            {
+                varient=0;
+            }
+         }
+         global.power_level=global.power_level-1;
+    }
+    
+    //normal
+    if (argument1=2)
+    {
+        enemy_role=irandom(1);
+         if (enemy_role=0)
+        {
+            spawn=instance_create(posx,posy,obj_crab);
+            with (spawn)
+            {
+                varient=0;
+            }
+                
+        }
+         if (enemy_role=1) 
+        {
+            spawn=instance_create(posx,posy,obj_blob);
+            with (spawn)
+            {
+                specific_varient=irandom(1);
+                if (specific_varient=0) varient=1;
+                if (specific_varient=1) varient=2;
+            }
+        }
+        global.power_level=global.power_level-2;
+    }
+    
+    //hard
+    if (argument1=3)
+    {
+        enemy_role=irandom(2);
+         if (enemy_role=0) 
+        {
+            spawn=instance_create(posx,posy,obj_skeleton);
+            with (spawn)
+            {
+               varient=2;
+            }
+        }
+         if (enemy_role=1) 
+        {
+            spawn=instance_create(posx,posy,obj_blob);
+            with (spawn)
+            {
+                varient=3;
+            }
+        }
+         if (enemy_role=2) 
+        {
+            spawn=instance_create(posx,posy,obj_syphon);
+            with (spawn)
+            {
+                varient=0;
+            }
+        }
+        global.power_level=global.power_level-3;
+    }
+}
 
 #define scr_enemy_spawn_mid_undead
 argument0=argument0;
@@ -963,7 +1046,7 @@ if(global.world=23)
     }
 }
 ////////////////////////////////////////////////////////////////////////////////////////////
-//world24 spawn list
+//wrable spawn list
 if(global.world=24)
 {
     //easy
@@ -1429,6 +1512,124 @@ if(global.world=63)
          if (enemy_role=1) 
         {
             spawn=instance_create(posx,posy,obj_golem);
+            with (spawn)
+            {
+                varient=0;
+            }
+        }
+        global.power_level=global.power_level-4;
+    }
+}
+///////////////////////////////////////////////////////////////////////////////////////////
+//world1 spawn list
+if(global.world=64)
+{
+    //easy
+    if (argument1=1)
+    {
+         
+            spawn=instance_create(posx,posy,obj_blob);
+            with (spawn)
+            {
+                specific_varient=irandom(1);
+                if (specific_varient=0) varient=1;
+                if (specific_varient=1) varient=2;
+            }
+         global.power_level=global.power_level-1;
+    }
+    
+    //normal
+    if (argument1=2)
+    {
+        spawn=instance_create(posx,posy,obj_syphon);
+        with (spawn)
+        {
+            specific_varient=0;
+            varient=specific_varient;
+        }
+            
+        global.power_level=global.power_level-2;
+    }
+    
+    //hard
+    if (argument1=3)
+    {
+         enemy_role=irandom(1);
+         if (enemy_role=0) 
+        {
+            spawn=instance_create(posx,posy,obj_lizard);
+            with (spawn)
+            {
+            specific_varient=irandom(3);
+            varient=specific_varient;
+            }
+        }
+         if (enemy_role=1) 
+        {
+            spawn=instance_create(posx,posy,obj_golem);
+            with (spawn)
+            {
+                varient=0;
+            }
+        }
+        global.power_level=global.power_level-4;
+    }
+}
+///////////////////////////////////////////////////////////////////////////////////////////
+//world1 spawn list
+if(global.world=65)
+{
+    //easy
+    if (argument1=1)
+    {
+         
+            spawn=instance_create(posx,posy,obj_blob);
+            with (spawn)
+            {
+                specific_varient=irandom(1);
+                if (specific_varient=0) varient=1;
+                if (specific_varient=1) varient=2;
+            }
+         global.power_level=global.power_level-1;
+    }
+    
+    //normal
+    if (argument1=2)
+    {
+        spawn=instance_create(posx,posy,obj_crab);
+        with (spawn)
+        {
+            specific_varient=0;
+            varient=specific_varient;
+        }
+            
+        global.power_level=global.power_level-2;
+    }
+    
+    //hard
+    if (argument1=3)
+    {
+         enemy_role=irandom(2);
+         if (enemy_role=0) 
+        {
+            spawn=instance_create(posx,posy,obj_lizard);
+            with (spawn)
+            {
+            specific_varient=irandom(3);
+            varient=specific_varient;
+            }
+        }
+         if (enemy_role=1) 
+        {
+            spawn=instance_create(posx,posy,obj_syphon);
+            with (spawn)
+            {
+                varient=0;
+            }
+        }
+         if (enemy_role=2) 
+        {
+            spawn=instance_create(posx,posy,obj_crab);
             with (spawn)
             {
                 varient=0;
@@ -2391,6 +2592,127 @@ if(global.world=163)
          if (enemy_role=1) 
         {
             spawn=instance_create(posx,posy,obj_golem);
+            with (spawn)
+            {
+                varient=0;
+            }
+        }
+        global.power_level=global.power_level-4;
+    }
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////
+//world1 spawn list
+if(global.world=164)
+{
+    //easy
+    if (argument1=1)
+    {
+         
+            spawn=instance_create(posx,posy,obj_blob);
+            with (spawn)
+            {
+                specific_varient=irandom(2);
+                varient=specific_varient+1;
+            }
+         global.power_level=global.power_level-1;
+    }
+    
+    //normal
+    if (argument1=2)
+    {
+        spawn=instance_create(posx,posy,obj_syphon);
+        with (spawn)
+        {
+            specific_varient=0;
+            varient=specific_varient;
+        }
+            
+        global.power_level=global.power_level-2;
+    }
+    
+    //hard
+    if (argument1=3)
+    {
+         enemy_role=irandom(1);
+         if (enemy_role=0) 
+        {
+            spawn=instance_create(posx,posy,obj_lizard);
+            with (spawn)
+            {
+            specific_varient=irandom(4);
+            varient=specific_varient;
+            }
+        }
+         if (enemy_role=1) 
+        {
+            spawn=instance_create(posx,posy,obj_golem);
+            with (spawn)
+            {
+                varient=0;
+            }
+        }
+        global.power_level=global.power_level-4;
+    }
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////
+//world1 spawn list
+if(global.world=165)
+{
+    //easy
+    if (argument1=1)
+    {
+          enemy_role=irandom(1);
+          if enemy_role=0{
+                spawn=instance_create(posx,posy,obj_blob);
+                with (spawn)
+                {
+                    specific_varient=irandom(2);
+                    varient=specific_varient+1;
+                }
+          }
+          if (enemy_role=1) 
+        {
+            spawn=instance_create(posx,posy,obj_crab);
+            with (spawn)
+            {
+                varient=0;
+            }
+        }
+          
+         global.power_level=global.power_level-1;
+    }
+    
+    //normal
+    if (argument1=2)
+    {
+        spawn=instance_create(posx,posy,obj_crab);
+        with (spawn)
+        {
+            specific_varient=0;
+            varient=specific_varient;
+        }
+            
+        global.power_level=global.power_level-2;
+    }
+    
+    //hard
+    if (argument1=3)
+    {
+         enemy_role=irandom(1);
+         if (enemy_role=0) 
+        {
+            spawn=instance_create(posx,posy,obj_lizard);
+            with (spawn)
+            {
+            specific_varient=irandom(4);
+            varient=specific_varient;
+            }
+        }
+         if (enemy_role=1) 
+        {
+            spawn=instance_create(posx,posy,obj_syphon);
             with (spawn)
             {
                 varient=0;

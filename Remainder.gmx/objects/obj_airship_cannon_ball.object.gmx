@@ -30,7 +30,7 @@ image_yscale=image_xscale;
 
 audio_hit_player=snd_player_hit;
 
-
+varient=0;
 
 damage_type_1=0;
 damage_1=5;

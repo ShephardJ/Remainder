@@ -88,6 +88,8 @@ next_player_state=0;
 scr_player_stats_health();
 scr_player_stats_weapons();
 scr_player_stats_potions();
+
+defeat=0;
 </string>
           </argument>
         </arguments>
@@ -193,6 +195,18 @@ range_array[14]=range_array[14];
             <kind>1</kind>
             <string>if global.player_health_current&lt;=0
 {
+    if defeat=0 {
+        instance_create(1080/2,1920/2,obj_DEFEAT);
+        var def=instance_create(1080/2,1920/2+30*7.8,obj_DEFEAT_menu);
+        def.type=1;
+        def=instance_create(1080/2,1920/2+54*7.8,obj_DEFEAT_menu);
+        def.type=2;
+        instance_create(1080/2,1920/2,obj_DEFEAT);
+        obj_play_dynamic_music.destroy=1;
+        soldier_hit_sound=audio_play_sound(snd_DEFEAT,5,false);
+        audio_sound_gain(soldier_hit_sound,global.vol_fx*0.65,0);
+        defeat=1;
+    }
     global.progress+=global.gold_accumulated;
     global.gold_accumulated=0;
     current_player_combat_state=player_combat_state.off;
@@ -202,15 +216,20 @@ range_array[14]=range_array[14];
     touch_type=scr_get_input();
     if touch_type=1 
     {
-        if file_exists("save.sav") file_delete("save.sav");
-        if file_exists("point.sav") file_delete("point.sav");
-        if file_exists("world.sav") file_delete("world.sav");
-        if file_exists("info.sav") file_delete("info.sav");
-        if file_exists("tile.sav") file_delete("tile.sav");
-        room_goto(room1);
+        if(mouse_x&gt;1080/2-45*7.8)&amp;&amp;(mouse_x&lt;1080/2+45*7.8)&amp;&amp;(mouse_y&gt;1920/2+18*7.8)&amp;&amp;(mouse_y&lt;1920/2+42*7.8){ 
+            room_restart();
+        }
+        if(mouse_x&gt;1080/2-45*7.8)&amp;&amp;(mouse_x&lt;1080/2+45*7.8)&amp;&amp;(mouse_y&gt;1920/2+42*7.8)&amp;&amp;(mouse_y&lt;1920/2+66*7.8){ 
+            room_goto(room1);
+        }
     }
     
 }
+
+if global.player_potion_current&lt;=1 {
+    global.dramatic=1;
+}
+else global.dramatic=0;
 </string>
           </argument>
         </arguments>
@@ -242,6 +261,29 @@ audio_sound_gain(player_hit_sound,global.vol_fx*0.6,0)
 press=0;
 }
 
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="96">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>global.fight_round=12;
 </string>
           </argument>
         </arguments>

@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>image_xscale=13;
+varient=0;
 image_yscale=image_xscale;
 image_speed=0;
 image_index=11;

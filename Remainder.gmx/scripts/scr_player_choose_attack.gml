@@ -27,6 +27,16 @@ touch_type=scr_get_input()
 //tapping the sword back to scr_master
 if(touch_type=1)&&(hlock=0)&&(vlock=0)&&(turnlock=0)&&(attcount=0)
 {
+    if(mouse_x>100)&&(mouse_x<980)&&(mouse_y>250)&&(mouse_y<1490){
+        if position_meeting(mouse_x,mouse_y,all){
+            temp_player_state=current_player_combat_state;
+            current_player_combat_state=player_combat_state.off;
+            var di=instance_position(mouse_x,mouse_y,all);
+            stats=instance_create(1080/2,1920/2,obj_stats_sheet);
+            stats.target_id=di;
+        }
+    }
+    
     instance_create(mouse_x-6*13,mouse_y-6.5*13,obj_tap);
     if(mouse_x>844)&&(mouse_x<1019)&&(mouse_y>1520)&&(mouse_y<1694)  
     {

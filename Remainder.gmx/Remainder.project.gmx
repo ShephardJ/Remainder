@@ -48,6 +48,12 @@
       <sound>sound\snd_odfm7_low_health</sound>
       <sound>sound\snd_odfm7_dramatic</sound>
     </sounds>
+    <sounds name="odfm8">
+      <sound>sound\snd_odfm8_mid</sound>
+      <sound>sound\snd_odfm8_very_low_health</sound>
+      <sound>sound\snd_odfm8_low_health</sound>
+      <sound>sound\snd_odfm8_dramatic</sound>
+    </sounds>
     <sounds name="boss music_1">
       <sound>sound\snd_boss_music_1_mid</sound>
       <sound>sound\snd_boss_music_1_very_low_health</sound>
@@ -66,6 +72,7 @@
         <sound>sound\snd_player_blocked</sound>
         <sound>sound\snd_player_bow</sound>
         <sound>sound\snd_player_bomb</sound>
+        <sound>sound\snd_DEFEAT</sound>
       </sounds>
       <sounds name="enemies">
         <sounds name="skeleton">
@@ -139,6 +146,17 @@
           <sound>sound\snd_mole_hit</sound>
           <sound>sound\snd_mole_death</sound>
           <sound>sound\snd_mole_hit_player</sound>
+        </sounds>
+        <sounds name="syphon">
+          <sound>sound\snd_syphon_hit</sound>
+          <sound>sound\snd_syphon_death</sound>
+          <sound>sound\snd_syphon_hit_player</sound>
+          <sound>sound\snd_syphoning</sound>
+        </sounds>
+        <sounds name="crab">
+          <sound>sound\snd_crab_hit</sound>
+          <sound>sound\snd_crab_death</sound>
+          <sound>sound\snd_crab_hit_player</sound>
         </sounds>
       </sounds>
       <sounds name="attack">
@@ -338,6 +356,7 @@
         <sprite>sprites\spr_fire_attack_fx</sprite>
         <sprite>sprites\spr_ice_attack_fx</sprite>
         <sprite>sprites\spr_poison_attack_fx</sprite>
+        <sprite>sprites\spr_physical_attack_fx</sprite>
         <sprite>sprites\spr_wind_fx</sprite>
         <sprite>sprites\spr_wind_2_fx</sprite>
         <sprite>sprites\spr_pushed_end</sprite>
@@ -366,6 +385,9 @@
         <sprite>sprites\spr_slash_hit_4</sprite>
         <sprite>sprites\spr_thrust_hit</sprite>
         <sprite>sprites\spr_thrust_hit_2</sprite>
+        <sprite>sprites\spr_DEFEAT</sprite>
+        <sprite>sprites\spr_DEFEAT_menu</sprite>
+        <sprite>sprites\spr_stats_sheet</sprite>
       </sprites>
       <sprites name="Enemies">
         <sprites name="skeleton">
@@ -654,6 +676,16 @@
           <sprite>sprites\spr_spider_jump_zombie</sprite>
           <sprite>sprites\spr_spider_death_zombie</sprite>
         </sprites>
+        <sprites name="syphon">
+          <sprite>sprites\spr_syphon</sprite>
+          <sprite>sprites\spr_syphon_death</sprite>
+          <sprite>sprites\spr_syphon_attack</sprite>
+        </sprites>
+        <sprites name="crab">
+          <sprite>sprites\spr_crab_sheld</sprite>
+          <sprite>sprites\spr_crab_unsheld</sprite>
+          <sprite>sprites\spr_crab_death</sprite>
+        </sprites>
       </sprites>
     </sprites>
     <sprites name="object">
@@ -791,6 +823,7 @@
           <script>scripts\scr_enemy_jump.gml</script>
           <script>scripts\scr_enemy_cleric_spell.gml</script>
           <script>scripts\scr_pesant_torch.gml</script>
+          <script>scripts\scr_enemy_syphon.gml</script>
         </scripts>
         <scripts name="boss scripts">
           <scripts name="red_dragon">
@@ -834,6 +867,9 @@
           <script>scripts\scr_stats_spiders.gml</script>
           <script>scripts\scr_stats_cleric.gml</script>
           <script>scripts\scr_stats_pesant.gml</script>
+          <script>scripts\scr_stats_syphon.gml</script>
+          <script>scripts\scr_stats_mole.gml</script>
+          <script>scripts\scr_stats_crab.gml</script>
         </scripts>
       </scripts>
       <script>scripts\scr_music_track_transition.gml</script>
@@ -893,8 +929,6 @@
       <script>scripts\scr_shop_buy_script_weapon.gml</script>
       <script>scripts\scr_tips.gml</script>
     </scripts>
-    <script>scripts\script95.gml</script>
-    <script>scripts\script96.gml</script>
     <scripts name="crawl">
       <scripts name="generation">
         <script>scripts\scr_crawle_create.gml</script>
@@ -957,6 +991,7 @@
         <object>objects\obj_menu_slider</object>
         <object>objects\obj_help</object>
         <object>objects\obj_swipe</object>
+        <object>objects\obj_stats_sheet</object>
       </objects>
       <objects name="FX">
         <objects name="attack">
@@ -992,6 +1027,8 @@
         <object>objects\obj_potion_ball_main</object>
         <object>objects\obj_potion_ball_tail</object>
         <object>objects\obj_tap</object>
+        <object>objects\obj_DEFEAT</object>
+        <object>objects\obj_DEFEAT_menu</object>
       </objects>
       <objects name="enemies">
         <objects name="skeleton">
@@ -1006,6 +1043,7 @@
           <object>objects\obj_blob_poison_death</object>
           <object>objects\obj_blob_zombie_death</object>
           <object>objects\obj_blob_fire_fx</object>
+          <object>objects\obj_blob_physical_fx</object>
           <object>objects\obj_blob_ice_fx</object>
           <object>objects\obj_blob_poison_fx</object>
         </objects>
@@ -1114,9 +1152,15 @@
           <object>objects\obj_spider</object>
           <object>objects\obj_spider_death</object>
         </objects>
-      </objects>
-      <objects name="detection">
-        <object>objects\obj_range_check</object>
+        <objects name="syphon">
+          <object>objects\obj_syphon</object>
+          <object>objects\obj_syphon_death</object>
+          <object>objects\obj_syphon_attack</object>
+        </objects>
+        <objects name="crab">
+          <object>objects\obj_crab</object>
+          <object>objects\obj_crab_death</object>
+        </objects>
       </objects>
       <objects name="shop">
         <object>objects\obj_shop_master</object>
@@ -1174,6 +1218,9 @@
         <object>objects\obj_crawl_top_back</object>
       </objects>
     </objects>
+    <objects name="win screen">
+      <object>objects\obj_win_menu</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\room1</room>
@@ -1185,6 +1232,7 @@
     <room>rooms\arcade_mode</room>
     <room>rooms\crawl</room>
     <room>rooms\test_run</room>
+    <room>rooms\win_room</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
@@ -1212,6 +1260,9 @@
     <audiogroup name="odfm6"/>
     <audiogroup name="odfm7"/>
     <audiogroup name="title_and_menu"/>
+    <audiogroup name="syphon_audio"/>
+    <audiogroup name="odfm8"/>
+    <audiogroup name="crab_audio"/>
   </audiogroups>
   <TutorialState>
     <IsTutorial>0</IsTutorial>

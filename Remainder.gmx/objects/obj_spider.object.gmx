@@ -165,6 +165,32 @@ if room=arcade_mode
     if varient=5 global.gold_accumulated+=round(11*((8-global.difficult)/8));
     if varient=6 global.gold_accumulated+=round(11*((8-global.difficult)/8));
     if varient=7 global.gold_accumulated+=round(13*((8-global.difficult)/8));
+    
+    if varient=0{
+        if global.spiders0=0{
+           global.spiders0=1;
+           scr_save_kills("kills.sav"); 
+        }
+    }
+    if varient=1{
+        if global.spiders1=0{
+           global.spiders1=1;
+           scr_save_kills("kills.sav"); 
+        }
+    }
+    if varient=2{
+        if global.spiders2=0{
+           global.spiders2=1;
+           scr_save_kills("kills.sav"); 
+        }
+    }
+    if varient=3{
+        if global.spiders3=0{
+           global.spiders3=1;
+           scr_save_kills("kills.sav"); 
+        }
+    }
+    
 }
 </string>
           </argument>

@@ -1,0 +1,48 @@
+//mole
+    if (varient =0)
+    {
+        init_hp=20;
+        hp=20;
+        damage_type_1=0;
+        damage_1=4;
+        damage_type_2=0;
+        damage_2=0;
+        wind_up=4;
+        range=4;
+        wind_down=2;
+        mouvement_speed=1;
+        slash_resistence=0.75;
+        pierce_resistence=0.75;
+        fire_resistance=1.25;
+        ice_resistance=1.25;
+        poison_resistance=1;
+        push_resistance=1.25;
+        sprite_index=spr_moles;
+        attack_type=0;
+        alive=1;
+        infected=0;
+    }
+    //mole infected
+    if (varient =1)
+    {
+        init_hp=20;
+        hp=20;
+        damage_type_1=0;
+        damage_1=8;
+        damage_type_2=0;
+        damage_2=0;
+        wind_up=2;
+        range=1;
+        wind_down=2;
+        mouvement_speed=1;
+        slash_resistence=0.5;
+        pierce_resistence=0.5;
+        fire_resistance=1.5;
+        ice_resistance=1.5;
+        poison_resistance=0;
+        push_resistance=0.5;
+        sprite_index=spr_moles_infected;
+        attack_type=0;
+        alive=0;
+        infected=1;
+    }

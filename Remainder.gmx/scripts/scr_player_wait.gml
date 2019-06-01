@@ -6,7 +6,7 @@ if(damage_taken_1>=1)
     var resist_2=scr_player_damage_taken_calc(player_damage_taken_type_2,global.pierce_resistence,global.player_slash_resistence,global.fire_resistance,global.ice_resistance,global.poison_resistance,global.push_resistance);
     damage_taken=floor(damage_taken_1*resist_1+damage_taken_2*resist_2);
     
-    if (damage_taken>1)
+    if (damage_taken>=1)
     {
         current_player_combat_state=player_combat_state.taking_damage;
     }

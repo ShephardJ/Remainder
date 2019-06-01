@@ -88,7 +88,13 @@ n=25*7.8;
             //go to reset
             if(mouse_x&gt;3*7.8)&amp;&amp;(mouse_x&lt;40*7.8)&amp;&amp;(mouse_y&gt;y-41*7.8)&amp;&amp;(mouse_y&lt;y-14*7.8) 
             {
-                if room=arcade_mode room_restart();
+                if room=arcade_mode {
+                    gold_accumulate=round(global.gold_accumulated*(global.difficult*0.25+1));
+                    global.progress+=gold_accumulate;
+                    global.gold_accumulated=0;
+                    scr_save_pro("pro.sav");
+                    room_restart();
+                }
                 else
                 {
                     if room=fight_room
@@ -114,7 +120,13 @@ n=25*7.8;
             // go to end
             if(mouse_x&gt;99*7.8)&amp;&amp;(mouse_x&lt;137*7.8)&amp;&amp;(mouse_y&gt;y-41*7.8)&amp;&amp;(mouse_y&lt;y-14*7.8) 
             {
-                if room=arcade_mode room_goto(room1);
+                if room=arcade_mode {
+                    gold_accumulate=round(global.gold_accumulated*(global.difficult*0.25+1));
+                    global.progress+=gold_accumulate;
+                    global.gold_accumulated=0;
+                    scr_save_pro("pro.sav");
+                    room_goto(room1);
+                }
                 else
                 {
                     if room=fight_room
@@ -315,11 +327,11 @@ draw_text(x,y-30*7.8,"RESUME");
 draw_set_halign(fa_center);
 draw_set_valign(fa_top);
 if room=arcade_mode draw_text(x-50*7.8,y-30*7.8,"RESET");
-else draw_text(x-50*7.8,y-30*7.8,"INFO");
+
 
 draw_set_halign(fa_center);
 draw_set_valign(fa_top);
-draw_text(x+50*7.8,y-30*7.8,"EXIT");
+if room=arcade_mode draw_text(x+50*7.8,y-30*7.8,"EXIT");
 
 draw_set_halign(fa_center);
 draw_set_valign(fa_top);

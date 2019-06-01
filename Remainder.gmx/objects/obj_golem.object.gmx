@@ -144,6 +144,37 @@ if room=arcade_mode
     if varient=2 global.gold_accumulated+=round(6*((8-global.difficult)/8));
     if varient=3 global.gold_accumulated+=round(6*((8-global.difficult)/8));
     if varient=4 global.gold_accumulated+=round(6*((8-global.difficult)/8));
+    
+    if varient=0{
+        if global.golem0=0{
+           global.golem0=1;
+           scr_save_kills("kills.sav"); 
+        }
+    }
+    if varient=1{
+        if global.golem1=0{
+           global.golem1=1;
+           scr_save_kills("kills.sav"); 
+        }
+    }
+    if varient=2{
+        if global.golem2=0{
+           global.golem2=1;
+           scr_save_kills("kills.sav"); 
+        }
+    }
+    if varient=3{
+        if global.golem3=0{
+           global.golem3=1;
+           scr_save_kills("kills.sav"); 
+        }
+    }
+    if varient=4{
+        if global.golem4=0{
+           global.golem4=1;
+           scr_save_kills("kills.sav"); 
+        }
+    }
 }
 
 if crack&gt;-5 crack.destroy=1;

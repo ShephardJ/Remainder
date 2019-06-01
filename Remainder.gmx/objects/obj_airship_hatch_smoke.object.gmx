@@ -32,6 +32,7 @@ image_yscale=image_xscale;
 image_alpha=random_range(0.4,0.7);
 spwnr_id=0;
 y_speed=0;
+varient=0;
 </string>
           </argument>
         </arguments>

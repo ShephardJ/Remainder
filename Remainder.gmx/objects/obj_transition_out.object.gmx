@@ -91,13 +91,14 @@ pause=0;
     audio_group_load(odfm5);
     audio_group_load(odfm6);
     audio_group_load(odfm7);
+    audio_group_load(odfm8);
     audio_group_load(title_and_menu);
     audio_group_load(boss_music_1);
-    if audio_group_is_loaded(odfm1)&amp;&amp;audio_group_is_loaded(odfm2)&amp;&amp;audio_group_is_loaded(odfm3)&amp;&amp;audio_group_is_loaded(odfm4)&amp;&amp;audio_group_is_loaded(odfm5)&amp;&amp;audio_group_is_loaded(odfm6)&amp;&amp;audio_group_is_loaded(odfm7)&amp;&amp;audio_group_is_loaded(boss_music_1)&amp;&amp;audio_group_is_loaded(title_and_menu) global.change_music=0;
+    if audio_group_is_loaded(odfm1)&amp;&amp;audio_group_is_loaded(odfm2)&amp;&amp;audio_group_is_loaded(odfm3)&amp;&amp;audio_group_is_loaded(odfm4)&amp;&amp;audio_group_is_loaded(odfm5)&amp;&amp;audio_group_is_loaded(odfm6)&amp;&amp;audio_group_is_loaded(odfm7)&amp;&amp;audio_group_is_loaded(odfm8)&amp;&amp;audio_group_is_loaded(boss_music_1)&amp;&amp;audio_group_is_loaded(title_and_menu) global.change_music=0;
 }
 
 
-if (destroy=1)&amp;&amp;(sprite_index=spr_transition_in_1_small)&amp;&amp;((global.change_music=0)&amp;&amp;((audio_group_is_loaded(odfm1)&amp;&amp;audio_group_is_loaded(odfm2)&amp;&amp;audio_group_is_loaded(odfm3)&amp;&amp;audio_group_is_loaded(odfm4)&amp;&amp;audio_group_is_loaded(odfm5)&amp;&amp;audio_group_is_loaded(odfm6)&amp;&amp;audio_group_is_loaded(odfm7)&amp;&amp;audio_group_is_loaded(boss_music_1)&amp;&amp;audio_group_is_loaded(title_and_menu))))
+if (destroy=1)&amp;&amp;(sprite_index=spr_transition_in_1_small)&amp;&amp;((global.change_music=0)&amp;&amp;((audio_group_is_loaded(odfm1)&amp;&amp;audio_group_is_loaded(odfm2)&amp;&amp;audio_group_is_loaded(odfm3)&amp;&amp;audio_group_is_loaded(odfm4)&amp;&amp;audio_group_is_loaded(odfm5)&amp;&amp;audio_group_is_loaded(odfm6)&amp;&amp;audio_group_is_loaded(odfm7)&amp;&amp;audio_group_is_loaded(odfm8)&amp;&amp;audio_group_is_loaded(boss_music_1)&amp;&amp;audio_group_is_loaded(title_and_menu))))
 {
     sprite_index=spr_transition_out_1_small;
     image_speed=14/60;
@@ -106,7 +107,7 @@ if (destroy=1)&amp;&amp;(sprite_index=spr_transition_in_1_small)&amp;&amp;((glob
     instance_create(x,y,obj_play_dynamic_music);  
 }
 
-if (destroy=1)&amp;&amp;(sprite_index=spr_transition_in_2_small)&amp;&amp;(death_sequence=1)&amp;&amp;((global.change_music=0)&amp;&amp;((audio_group_is_loaded(odfm1)&amp;&amp;audio_group_is_loaded(odfm2)&amp;&amp;audio_group_is_loaded(odfm3)&amp;&amp;audio_group_is_loaded(odfm4)&amp;&amp;audio_group_is_loaded(odfm5)&amp;&amp;audio_group_is_loaded(odfm6)&amp;&amp;audio_group_is_loaded(odfm7)&amp;&amp;audio_group_is_loaded(boss_music_1)&amp;&amp;audio_group_is_loaded(title_and_menu))))
+if (destroy=1)&amp;&amp;(sprite_index=spr_transition_in_2_small)&amp;&amp;(death_sequence=1)&amp;&amp;((global.change_music=0)&amp;&amp;((audio_group_is_loaded(odfm1)&amp;&amp;audio_group_is_loaded(odfm2)&amp;&amp;audio_group_is_loaded(odfm3)&amp;&amp;audio_group_is_loaded(odfm4)&amp;&amp;audio_group_is_loaded(odfm5)&amp;&amp;audio_group_is_loaded(odfm6)&amp;&amp;audio_group_is_loaded(odfm7)&amp;&amp;audio_group_is_loaded(odfm8)&amp;&amp;audio_group_is_loaded(boss_music_1)&amp;&amp;audio_group_is_loaded(title_and_menu))))
 {
     image_xscale*=-1;
     image_yscale*=-1;
@@ -115,7 +116,7 @@ if (destroy=1)&amp;&amp;(sprite_index=spr_transition_in_2_small)&amp;&amp;(death
     instance_create(x,y,obj_play_dynamic_music);  
 }
 
-if (destroy=1)&amp;&amp;(sprite_index=spr_transition_in_3_small)&amp;&amp;(death_sequence=1)&amp;&amp;((global.change_music=0)&amp;&amp;((audio_group_is_loaded(odfm1)&amp;&amp;audio_group_is_loaded(odfm2)&amp;&amp;audio_group_is_loaded(odfm3)&amp;&amp;audio_group_is_loaded(odfm4)&amp;&amp;audio_group_is_loaded(odfm5)&amp;&amp;audio_group_is_loaded(odfm6)&amp;&amp;audio_group_is_loaded(odfm7)&amp;&amp;audio_group_is_loaded(boss_music_1)&amp;&amp;audio_group_is_loaded(title_and_menu))))
+if (destroy=1)&amp;&amp;(sprite_index=spr_transition_in_3_small)&amp;&amp;(death_sequence=1)&amp;&amp;((global.change_music=0)&amp;&amp;((audio_group_is_loaded(odfm1)&amp;&amp;audio_group_is_loaded(odfm2)&amp;&amp;audio_group_is_loaded(odfm3)&amp;&amp;audio_group_is_loaded(odfm4)&amp;&amp;audio_group_is_loaded(odfm5)&amp;&amp;audio_group_is_loaded(odfm6)&amp;&amp;audio_group_is_loaded(odfm7)&amp;&amp;audio_group_is_loaded(odfm8)&amp;&amp;audio_group_is_loaded(boss_music_1)&amp;&amp;audio_group_is_loaded(title_and_menu))))
 {
     image_xscale*=-1;
     image_speed=-20/60;

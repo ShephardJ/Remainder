@@ -65,6 +65,9 @@ damage_taken_2=0;
 alive=1;
 infected=0;
 
+    blob_hit_sound=audio_play_sound(snd_blob_hit,5,false);
+    audio_sound_gain(blob_hit_sound,global.vol_fx*0.0,0);
+
 audio_hit_player=snd_blob_player_hit;
 if (!audio_group_is_loaded(blob_audio))audio_group_load(blob_audio);
 </string>
@@ -130,6 +133,37 @@ if room=arcade_mode
     if varient=2 global.gold_accumulated+=round(6*((8-global.difficult)/8));
     if varient=3 global.gold_accumulated+=round(7*((8-global.difficult)/8));
     if varient=4 global.gold_accumulated+=round(7*((8-global.difficult)/8));
+    
+    if varient=0{
+        if global.blob0=0{
+           global.blob0=1;
+           scr_save_kills("kills.sav"); 
+        }
+    }
+    if varient=1{
+        if global.blob1=0{
+           global.blob1=1;
+           scr_save_kills("kills.sav"); 
+        }
+    }
+    if varient=2{
+        if global.blob2=0{
+           global.blob2=1;
+           scr_save_kills("kills.sav"); 
+        }
+    }
+    if varient=3{
+        if global.blob3=0{
+           global.blob3=1;
+           scr_save_kills("kills.sav"); 
+        }
+    }
+    if varient=4{
+        if global.blob4=0{
+           global.blob4=1;
+           scr_save_kills("kills.sav"); 
+        }
+    }
 }
 </string>
           </argument>
@@ -244,6 +278,12 @@ if (hit=1)&amp;&amp;(waiting=0)||(pushed=1)
         //thrust damage
         if instance_exists(obj_weapon_thrust)||instance_exists(obj_item_projectile_fx)
         {
+            
+            if (varient=0)
+            {
+                splash=instance_create(x,y-240,obj_blob_physical_fx);
+                with splash {var getd=instance_place(x,y+240,obj_blob); damage_1=getd.damage_taken_1;damage_2=getd.damage_taken_2;}
+            }
             if (varient=1)
             {
                 splash=instance_create(x,y-240,obj_blob_fire_fx);
@@ -265,6 +305,14 @@ if (hit=1)&amp;&amp;(waiting=0)||(pushed=1)
         if instance_exists(obj_weapon_slash)
         {
             var specialeffectx=obj_weapon_slash.image_xscale*321;
+            if (varient=0)
+            {
+                
+                splash=instance_create(x+specialeffectx,y,obj_blob_physical_fx);
+                splash.damage_1=damage_taken_1;
+                splash.damage_2=damage_taken_2;
+            }
+            
             if (varient=1)
             {
                 

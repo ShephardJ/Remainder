@@ -14,6 +14,7 @@
 show_debug_overlay(true);
 audio_stop_all();
 
+
 global.dramatic=0;
 
 global.current_world=0;
@@ -163,6 +164,7 @@ audio_group_load(odfm4);
 audio_group_load(odfm5);
 audio_group_load(odfm6);
 audio_group_load(odfm7);
+audio_group_load(odfm8);
 audio_group_load(title_and_menu);
 audio_group_load(boss_music_1);
 

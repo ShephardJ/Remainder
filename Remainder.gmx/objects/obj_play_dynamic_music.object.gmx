@@ -55,6 +55,7 @@ if(global.boss=0)
             if (audio_group_is_loaded(odfm5))audio_group_unload(odfm5);
             if (audio_group_is_loaded(odfm6))audio_group_unload(odfm6);
             if (audio_group_is_loaded(odfm7))audio_group_unload(odfm7);
+            if (audio_group_is_loaded(odfm8))audio_group_unload(odfm8);
             if (audio_group_is_loaded(boss_music_1))audio_group_unload(boss_music_1);
         }
         if room=startup
@@ -82,12 +83,13 @@ if(global.boss=0)
             if (audio_group_is_loaded(odfm5))audio_group_unload(odfm5);
             if (audio_group_is_loaded(odfm6))audio_group_unload(odfm6);
             if (audio_group_is_loaded(odfm7))audio_group_unload(odfm7);
+            if (audio_group_is_loaded(odfm8))audio_group_unload(odfm8);
             if (audio_group_is_loaded(boss_music_1))audio_group_unload(boss_music_1);
         }
     }
     else
     {
-        music_choice=(irandom_range(1,7))
+        music_choice=(irandom_range(1,8))
         
         //odfm1
         if (music_choice=1)
@@ -115,6 +117,7 @@ if(global.boss=0)
             if (audio_group_is_loaded(odfm5))audio_group_unload(odfm5);
             if (audio_group_is_loaded(odfm6))audio_group_unload(odfm6);
             if (audio_group_is_loaded(odfm7))audio_group_unload(odfm7);
+            if (audio_group_is_loaded(odfm8))audio_group_unload(odfm8);
             if (audio_group_is_loaded(boss_music_1))audio_group_unload(boss_music_1);
             if (audio_group_is_loaded(title_and_menu))audio_group_unload(title_and_menu);
         }
@@ -144,6 +147,7 @@ if(global.boss=0)
             if (audio_group_is_loaded(odfm5))audio_group_unload(odfm5);
             if (audio_group_is_loaded(odfm6))audio_group_unload(odfm6);
             if (audio_group_is_loaded(odfm7))audio_group_unload(odfm7);
+            if (audio_group_is_loaded(odfm8))audio_group_unload(odfm8);
             if (audio_group_is_loaded(boss_music_1))audio_group_unload(boss_music_1);
             if (audio_group_is_loaded(title_and_menu))audio_group_unload(title_and_menu);
         }
@@ -171,8 +175,9 @@ if(global.boss=0)
             if (audio_group_is_loaded(odfm2))audio_group_unload(odfm2);
             if (audio_group_is_loaded(odfm4))audio_group_unload(odfm4);
             if (audio_group_is_loaded(odfm5))audio_group_unload(odfm5);
-            if (audio_group_is_loaded(odfm6))audio_group_unload(odfm6)
-            if (audio_group_is_loaded(odfm7))audio_group_unload(odfm7);;
+            if (audio_group_is_loaded(odfm6))audio_group_unload(odfm6);
+            if (audio_group_is_loaded(odfm7))audio_group_unload(odfm7);
+            if (audio_group_is_loaded(odfm8))audio_group_unload(odfm8);
             if (audio_group_is_loaded(boss_music_1))audio_group_unload(boss_music_1);
             if (audio_group_is_loaded(title_and_menu))audio_group_unload(title_and_menu);
             
@@ -203,6 +208,7 @@ if(global.boss=0)
             if (audio_group_is_loaded(odfm5))audio_group_unload(odfm5);
             if (audio_group_is_loaded(odfm6))audio_group_unload(odfm6);
             if (audio_group_is_loaded(odfm7))audio_group_unload(odfm7);
+            if (audio_group_is_loaded(odfm8))audio_group_unload(odfm8);
             if (audio_group_is_loaded(boss_music_1))audio_group_unload(boss_music_1);
             if (audio_group_is_loaded(title_and_menu))audio_group_unload(title_and_menu);
         }
@@ -231,6 +237,7 @@ if(global.boss=0)
             if (audio_group_is_loaded(odfm4))audio_group_unload(odfm4);
             if (audio_group_is_loaded(odfm6))audio_group_unload(odfm6);
             if (audio_group_is_loaded(odfm7))audio_group_unload(odfm7);
+            if (audio_group_is_loaded(odfm8))audio_group_unload(odfm8);
             if (audio_group_is_loaded(boss_music_1))audio_group_unload(boss_music_1);
             if (audio_group_is_loaded(title_and_menu))audio_group_unload(title_and_menu);
         }
@@ -260,6 +267,7 @@ if(global.boss=0)
             if (audio_group_is_loaded(odfm4))audio_group_unload(odfm4);
             if (audio_group_is_loaded(odfm5))audio_group_unload(odfm5);
             if (audio_group_is_loaded(odfm7))audio_group_unload(odfm7);
+            if (audio_group_is_loaded(odfm8))audio_group_unload(odfm8);
             if (audio_group_is_loaded(boss_music_1))audio_group_unload(boss_music_1);
             if (audio_group_is_loaded(title_and_menu))audio_group_unload(title_and_menu);
         }
@@ -288,6 +296,36 @@ if(global.boss=0)
             if (audio_group_is_loaded(odfm4))audio_group_unload(odfm4);
             if (audio_group_is_loaded(odfm5))audio_group_unload(odfm5);
             if (audio_group_is_loaded(odfm6))audio_group_unload(odfm6);
+            if (audio_group_is_loaded(odfm8))audio_group_unload(odfm8);
+            if (audio_group_is_loaded(boss_music_1))audio_group_unload(boss_music_1);
+            if (audio_group_is_loaded(title_and_menu))audio_group_unload(title_and_menu);
+        }
+        //odfm8
+        if (music_choice=8)
+        {
+            bass=audio_play_sound(snd_odfm8_mid,0,true);
+            low_hp=audio_play_sound(snd_odfm8_low_health,0,true);
+            very_low_hp=audio_play_sound(snd_odfm8_very_low_health,0,true);
+            dramatic=audio_play_sound(snd_odfm8_dramatic,15,true);
+            vol1=0.5;
+            vol2=0.5;
+            vol3=0.5;
+            vol4=0.5;
+            audio_sound_gain(bass,global.vol_music*0.45,0);
+            audio_sound_gain(low_hp,0,0);
+            audio_sound_gain(very_low_hp,0,0);
+            audio_sound_gain(dramatic,0,0);
+            audio_pause_sound(low_hp);
+            audio_pause_sound(very_low_hp);
+            audio_pause_sound(dramatic);
+            current_track=bass;
+            if (audio_group_is_loaded(odfm1))audio_group_unload(odfm1);
+            if (audio_group_is_loaded(odfm2))audio_group_unload(odfm2);
+            if (audio_group_is_loaded(odfm3))audio_group_unload(odfm3);
+            if (audio_group_is_loaded(odfm4))audio_group_unload(odfm4);
+            if (audio_group_is_loaded(odfm5))audio_group_unload(odfm5);
+            if (audio_group_is_loaded(odfm6))audio_group_unload(odfm6);
+            if (audio_group_is_loaded(odfm7))audio_group_unload(odfm7);
             if (audio_group_is_loaded(boss_music_1))audio_group_unload(boss_music_1);
             if (audio_group_is_loaded(title_and_menu))audio_group_unload(title_and_menu);
         }
@@ -318,6 +356,8 @@ if(global.boss&gt;0)
     if (audio_group_is_loaded(odfm5))audio_group_unload(odfm5);
     if (audio_group_is_loaded(odfm6))audio_group_unload(odfm6);
     if (audio_group_is_loaded(odfm7))audio_group_unload(odfm7);
+    if (audio_group_is_loaded(odfm8))audio_group_unload(odfm8);
+    if (audio_group_is_loaded(title_and_menu))audio_group_unload(title_and_menu);
 }
 
 

@@ -77,7 +77,7 @@
         init_hp=15;
         hp=15;
         damage_type_1=5;
-        damage_1=1.1;
+        damage_1=1.51;
         damage_type_2=0;
         damage_2=0;
         wind_up=2;

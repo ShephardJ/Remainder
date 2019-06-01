@@ -144,6 +144,13 @@ if room=arcade_mode
     if varient=3 global.gold+=round(8*((8-global.difficult)/8));
     if varient=4 global.gold+=round(9*((8-global.difficult)/8));
     if varient=5 global.gold+=round(10*((8-global.difficult)/8));
+    
+    if varient=0{
+        if global.cleric0=0{
+           global.cleric0=1;
+           scr_save_kills("kills.sav"); 
+        }
+    }
 }
 </string>
           </argument>

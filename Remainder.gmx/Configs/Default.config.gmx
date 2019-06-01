@@ -216,6 +216,9 @@
     <option_audioGroup1_targets>9223372036854775807</option_audioGroup1_targets>
     <option_audioGroup20_targets>9223372036854775807</option_audioGroup20_targets>
     <option_audioGroup21_targets>9223372036854775807</option_audioGroup21_targets>
+    <option_audioGroup22_targets>9223372036854775807</option_audioGroup22_targets>
+    <option_audioGroup23_targets>9223372036854775807</option_audioGroup23_targets>
+    <option_audioGroup24_targets>9223372036854775807</option_audioGroup24_targets>
     <option_audioGroup2_targets>9223372036854775807</option_audioGroup2_targets>
     <option_audioGroup3_targets>9223372036854775807</option_audioGroup3_targets>
     <option_audioGroup4_targets>9223372036854775807</option_audioGroup4_targets>
@@ -224,7 +227,7 @@
     <option_audioGroup7_targets>9223372036854775807</option_audioGroup7_targets>
     <option_audioGroup8_targets>9223372036854775807</option_audioGroup8_targets>
     <option_audioGroup9_targets>9223372036854775807</option_audioGroup9_targets>
-    <option_audioGroupCount>22</option_audioGroupCount>
+    <option_audioGroupCount>25</option_audioGroupCount>
     <option_author></option_author>
     <option_backimage>nil</option_backimage>
     <option_borderless>False</option_borderless>
@@ -470,7 +473,7 @@
     <option_savekey>true</option_savekey>
     <option_scale>-1</option_scale>
     <option_scaleprogress>true</option_scaleprogress>
-    <option_sci_UseSCI>-1</option_sci_UseSCI>
+    <option_sci_UseSCI>0</option_sci_UseSCI>
     <option_sci_serverLocation></option_sci_serverLocation>
     <option_screenkey>True</option_screenkey>
     <option_screenshotkey>true</option_screenshotkey>

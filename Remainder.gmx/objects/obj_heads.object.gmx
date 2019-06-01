@@ -119,6 +119,19 @@ if room=arcade_mode
     
     if varient=2 global.gold+=round(5*((8-global.difficult)/8));
     if varient=5 global.gold+=round(6*((8-global.difficult)/8));
+    
+    if varient=2{
+        if global.heads0=0{
+           global.heads0=1;
+           scr_save_kills("kills.sav"); 
+        }
+    }
+    if varient=5{
+        if global.heads1=0{
+           global.heads1=1;
+           scr_save_kills("kills.sav"); 
+        }
+    }
 }
 </string>
           </argument>

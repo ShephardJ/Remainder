@@ -34,13 +34,11 @@ if (transition_start=1)
     if global.fight_round<13global.world=fight_round_array[global.fight_round];
     else
     {
-        global.progress+=global.gold_accumulated;
-        global.gold_accumulated=0;
         current_player_combat_state=player_combat_state.off;
     
-        scr_save_pro("pro.sav");
         
-        room_goto(room1);
+        
+        room_goto(win_room);
     }
     
     transition_start=0;

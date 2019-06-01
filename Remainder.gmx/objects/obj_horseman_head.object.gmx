@@ -197,6 +197,7 @@ if(start_up=1)
     scr_stats_horseman();
     start_up=0;image_xscale=13;
     image_yscale=image_xscale;
+    scr_determin_player_wait_wait_array();
 }
 
 hp=hp;

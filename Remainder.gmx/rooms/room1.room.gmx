@@ -37,6 +37,80 @@ else
     global.vol_fx=0.66;
     global.difficult=0;
 }
+if file_exists("kills.sav"){
+    scr_load_kills("kills.sav");
+}
+else{
+    global.skeleton0=0;
+    global.skeleton1=0;
+    global.skeleton2=0;
+    
+    global.blob0=0;
+    global.blob1=0;
+    global.blob2=0;
+    global.blob3=0;
+    global.blob4=0;
+    
+    global.zombie0=0;
+    global.zombie1=0;
+    global.zombie2=0;
+    global.zombie3=0;
+    
+    global.lizard0=0;
+    global.lizard1=0;
+    global.lizard2=0;
+    global.lizard3=0;
+    global.lizard4=0;
+    
+    global.golem0=0;
+    global.golem1=0;
+    global.golem2=0;
+    global.golem3=0;
+    global.golem4=0;
+    
+    global.wizard0=0;
+    global.wizard1=0;
+    global.wizard2=0;
+    global.wizard3=0;
+    global.wizard4=0;
+    global.wizard5=0;
+    
+    global.soldier0=0;
+    global.soldier1=0;
+    global.soldier2=0;
+    global.soldier3=0;
+    global.soldier4=0;
+    global.soldier5=0;
+    global.soldier6=0;
+    global.soldier7=0;
+    
+    global.heads0=0;
+    global.heads1=0;
+    
+    global.spiders0=0;
+    global.spiders1=0;
+    global.spiders2=0;
+    global.spiders3=0;
+    
+    global.cleric0=0;
+    
+    global.pesant0=0;
+    global.pesant1=0;
+    global.pesant2=0;
+    global.pesant3=0;
+    global.pesant4=0;
+    
+    global.syphon0=0;
+    
+    global.mole0=0;
+    global.mole1=0;
+    
+    global.crab0=0;
+    global.crab1=0;
+    scr_save_kills("kills.sav");
+}
+
+
 global.current_world=0;
 global.getting_input=0;
 global.special_burn_ajust=0;

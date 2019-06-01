@@ -13,7 +13,8 @@ do
 var fght_rnd = 12;
 var world_var= irandom_range(1,4);
 var fire=irandom(1);
-var spec_world_var=irandom(2);
+if world_var=4 var spec_world_var=irandom(4);
+else spec_world_var=irandom(2);
 
 //set world 12 to 9
 repeat(4)
@@ -62,9 +63,12 @@ repeat(4)
     //monsters
     if world_var=4
     {
+        
         if spec_world_var=0 global.world=161
         if spec_world_var=1 global.world=162
         if spec_world_var=2 global.world=163
+        if spec_world_var=3 global.world=164
+        if spec_world_var=4 global.world=165
         fight_round_array[12]=irandom_range(1,2);
     }
     fight_round_array[fght_rnd] =global.world;
@@ -76,8 +80,13 @@ repeat(2)
 {
     var world_var= irandom_range(1,4);
     var fire=irandom(1);
-    if world_var=2 var spec_world_var=irandom(3);
+    if world_var=4{
+        var spec_world_var=irandom(4)
+    }
+    else{
+        if (world_var=2) var spec_world_var=irandom(3);
     else var spec_world_var=irandom(2);
+    }
 }
 repeat(4)
 {
@@ -126,16 +135,18 @@ repeat(4)
     //monsters
     if world_var=4
     {
-        if spec_world_var=0 global.world=61
-        if spec_world_var=1 global.world=62
-        if spec_world_var=2 global.world=63
+        if spec_world_var=0 global.world=61;
+        if spec_world_var=1 global.world=62;
+        if spec_world_var=2 global.world=63;
+        if spec_world_var=3 global.world=64;
+        if spec_world_var=4 global.world=65;
         fight_round_array[8]=irandom_range(1,2);
     }
     
     fight_round_array[fght_rnd] =global.world;
     fght_rnd-=1;
 }
-var world_var= irandom(5)
+var world_var= irandom(6)
 //set world 4 to 0
 repeat(5)
 {
@@ -146,7 +157,7 @@ repeat(5)
     else fight_round_array[4]=irandom_range(2,3);
     if global.world=2 fight_round_array[4]=5;
     if global.world=5 fight_round_array[4]=6;
-   
+    if global.world=6 fight_round_array[4]=7;
     fight_round_array[fght_rnd] =global.world;
     fght_rnd-=1;
     if world_var= 3 var world_var= irandom(4);

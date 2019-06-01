@@ -154,6 +154,37 @@ if room=arcade_mode
     if varient=3 global.gold_accumulated+=round(1*((8-global.difficult)/8));
     if varient=4 global.gold_accumulated+=round(2*((8-global.difficult)/8));
     if varient=5 global.gold_accumulated+=round(2*((8-global.difficult)/8));
+    
+    if varient=0{
+        if global.pesant0=0{
+           global.pesant0=1;
+           scr_save_kills("kills.sav"); 
+        }
+    }
+    if varient=1{
+        if global.pesant1=0{
+           global.pesant1=1;
+           scr_save_kills("kills.sav"); 
+        }
+    }
+    if varient=2{
+        if global.pesant2=0{
+           global.pesant2=1;
+           scr_save_kills("kills.sav"); 
+        }
+    }
+    if varient=3{
+        if global.pesant3=0{
+           global.pesant3=1;
+           scr_save_kills("kills.sav"); 
+        }
+    }
+    if varient=4{
+        if global.pesant4=0{
+           global.pesant4=1;
+           scr_save_kills("kills.sav"); 
+        }
+    }
 }
 </string>
           </argument>
@@ -214,7 +245,7 @@ else
         //start of enemy turn
         if(global.enemy_acting=0)
         {
-            scr_enemy_turn_start_up();
+            scr_enemy_turn_start_up_2();
         }
     
         //do something
@@ -364,6 +395,32 @@ if (hp&lt;=0)
     soldier_dead_sound=audio_play_sound(snd_soldier_death,5,false);
     audio_sound_gain(soldier_dead_sound,global.vol_fx*0.65,0);
     instance_destroy();
+    //do splash damage for bomb thrower
+    if instance_exists(obj_weapon_slash)||instance_exists(obj_weapon_thrust)||instance_exists(obj_item_projectile_fx)
+    {
+        //thrust damage
+        if instance_exists(obj_weapon_thrust)||instance_exists(obj_item_projectile_fx)
+        {
+            if (varient=2)
+            {
+                splash=instance_create(x,y-240,obj_blob_fire_fx);
+                with splash {var getd=instance_place(x,y+240,obj_blob); damage_1=5;damage_2=0;}
+            }
+            
+        }
+        //slash damage
+        if instance_exists(obj_weapon_slash)
+        {
+            var specialeffectx=obj_weapon_slash.image_xscale*321;
+            if (varient=2)
+            {
+                splash=instance_create(x+specialeffectx,y,obj_blob_fire_fx);
+                splash.damage_1=5;
+                splash.damage_2=0;
+            }
+           
+        }damage_taken_type_1=0;damage_taken_1=0;amage_taken_type_2=0;damage_taken_2=0;
+    }
 }
     
 

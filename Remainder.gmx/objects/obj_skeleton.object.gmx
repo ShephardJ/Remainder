@@ -141,6 +141,25 @@ if room=arcade_mode
     if varient=0 global.gold+=round(5*((8-global.difficult)/8));
     if varient=1 global.gold+=round(6*((8-global.difficult)/8));
     if varient=2 global.gold+=round(6*((8-global.difficult)/8));
+    
+    if varient=0{
+        if global.skeleton0=0{
+           global.skeleton0=1;
+           scr_save_kills("kills.sav"); 
+        }
+    }
+    if varient=1{
+        if global.skeleton1=0{
+           global.skeleton1=1;
+           scr_save_kills("kills.sav"); 
+        }
+    }
+    if varient=2{
+        if global.skeleton2=0{
+           global.skeleton2=1;
+           scr_save_kills("kills.sav"); 
+        }
+    }
 }
 state_visual.destroy=1;
 obj_overlay_test.range_array[current_range_array]=0;

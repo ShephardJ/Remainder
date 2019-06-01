@@ -19,7 +19,7 @@
         attack_type=1;
         alive=0;
         infected=0;
-        scr_determin_player_wait_wait_array();
+        
     }
      if (varient =1)
     {
@@ -42,5 +42,5 @@
         attack_type=1;
         alive=0;
         infected=0;
-        scr_determin_player_wait_wait_array();
+        
     }

@@ -156,9 +156,11 @@ if room=arcade_mode
             <kind>1</kind>
             <string>///vars
 if(start_up=1)
-{scr_stats_litch();
+{
+    scr_stats_litch();
     start_up=0;image_xscale=13;
     image_yscale=image_xscale;
+    scr_determin_player_wait_wait_array();
 }
 
 hp=hp;

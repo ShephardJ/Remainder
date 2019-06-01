@@ -160,6 +160,55 @@ if room=arcade_mode
     if varient=5 global.gold+=round(11*((8-global.difficult)/8));
     if varient=6 global.gold+=round(11*((8-global.difficult)/8));
     if varient=7 global.gold+=round(13*((8-global.difficult)/8));
+    
+    if varient=0{
+        if global.soldier0=0{
+           global.soldier0=1;
+           scr_save_kills("kills.sav"); 
+        }
+    }
+    if varient=1{
+        if global.soldier1=0{
+           global.soldier1=1;
+           scr_save_kills("kills.sav"); 
+        }
+    }
+    if varient=2{
+        if global.soldier2=0{
+           global.soldier2=1;
+           scr_save_kills("kills.sav"); 
+        }
+    }
+    if varient=3{
+        if global.soldier3=0{
+           global.soldier3=1;
+           scr_save_kills("kills.sav"); 
+        }
+    }
+    if varient=4{
+        if global.soldier4=0{
+           global.soldier4=1;
+           scr_save_kills("kills.sav"); 
+        }
+    }
+    if varient=5{
+        if global.soldier5=0{
+           global.soldier5=1;
+           scr_save_kills("kills.sav"); 
+        }
+    }
+    if varient=6{
+        if global.soldier6=0{
+           global.soldier6=1;
+           scr_save_kills("kills.sav"); 
+        }
+    }
+    if varient=7{
+        if global.soldier7=0{
+           global.soldier7=1;
+           scr_save_kills("kills.sav"); 
+        }
+    }
 }
 </string>
           </argument>

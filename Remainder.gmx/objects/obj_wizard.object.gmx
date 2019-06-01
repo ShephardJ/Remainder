@@ -136,6 +136,43 @@ if room=arcade_mode
     if varient=3 global.gold_accumulated+=round(8*((8-global.difficult)/8));
     if varient=4 global.gold_accumulated+=round(9*((8-global.difficult)/8));
     if varient=5 global.gold_accumulated+=round(10*((8-global.difficult)/8));
+    
+    if varient=0{
+        if global.wizard0=0{
+           global.wizard0=1;
+           scr_save_kills("kills.sav"); 
+        }
+    }
+    if varient=1{
+        if global.wizard1=0{
+           global.wizard1=1;
+           scr_save_kills("kills.sav"); 
+        }
+    }
+    if varient=2{
+        if global.wizard2=0{
+           global.wizard2=1;
+           scr_save_kills("kills.sav"); 
+        }
+    }
+    if varient=3{
+        if global.wizard3=0{
+           global.wizard3=1;
+           scr_save_kills("kills.sav"); 
+        }
+    }
+    if varient=4{
+        if global.wizard4=0{
+           global.wizard4=1;
+           scr_save_kills("kills.sav"); 
+        }
+    }
+    if varient=5{
+        if global.wizard5=0{
+           global.wizard5=1;
+           scr_save_kills("kills.sav"); 
+        }
+    }
 }
 </string>
           </argument>
